@@ -17,7 +17,6 @@ import com.google.firebase.database.FirebaseDatabase
 
 class NewNoteDialog : DialogFragment(), View.OnClickListener {
 
-
     lateinit var cancelButton: Button
     lateinit var okButton: Button
     lateinit var titleText: EditText
@@ -46,16 +45,25 @@ class NewNoteDialog : DialogFragment(), View.OnClickListener {
         //create an onClick for the OKay button that will write it to the firebase
         okButton.setOnClickListener(View.OnClickListener {
             //Take what is in the EditTExt and assign it to the note class
-            var title = titleText.text.toString()
-            var content = contentText.text.toString()
+            var title = titleText.text.toString().trim()
+            var content = contentText.text.toString().trim()
             var note = Note(title, content)
 
             //Push the note to the database with the references
             var currentUser = FirebaseAuth.getInstance().currentUser
             var mRootRef = FirebaseDatabase.getInstance().reference
-            var mUserRef = mRootRef.child(currentUser!!.uid)
+            var mUserRef = mRootRef.child("user_one")
 
-            mUserRef.push().setValue(note)
+            if (title.isEmpty()){
+                titleText.error = "Please enter a title for your note :)"
+            }
+            else {
+                mUserRef.push().setValue(note)
+            }
+
+            //Clear the EditText labels
+            titleText.text.clear()
+            contentText.text.clear()
         })
 
         return builder.create()
