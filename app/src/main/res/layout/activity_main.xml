@@ -8,6 +8,7 @@
     tools:context="com.example.joshuarambert.dulynoted.MainActivity">
 
     <ListView
+        android:id="@+id/notesListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -16,7 +17,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

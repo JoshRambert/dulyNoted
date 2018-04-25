@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "68207253985",
+    "firebase_url": "https://dulynoted-253f8.firebaseio.com",
+    "project_id": "dulynoted-253f8",
+    "storage_bucket": "dulynoted-253f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68207253985:android:73e4ee0a9de14596",
+        "android_client_info": {
+          "package_name": "com.example.joshuarambert.dulynoted"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68207253985-dhdj3ktpuehanfetd0m0h1sfe1u745m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdHj-4j_TDVcstlNHS0jxTcqXPIjntrDE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
